@@ -1,7 +1,7 @@
-FROM composer/composer:base
-MAINTAINER Vi Nguyen <vi.nt@geekup.vn>
+FROM composer:1.6.3
+LABEL MAINTAINER="Vi Nguyen <vi.nt@geekup.vn>"
 
-ENV COMPOSER_VERSION 1.2.0 
+ENV COMPOSER_VERSION 1.6.3
 
 # Install Composer
 RUN php /tmp/composer-setup.php --no-ansi --install-dir=/usr/local/bin --filename=composer --version=${COMPOSER_VERSION} && rm -rf /tmp/composer-setup.php
